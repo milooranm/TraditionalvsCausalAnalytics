@@ -22,8 +22,8 @@ The full research project report as submitted to my college is included [Here](T
 - [Description](#description)
 - [Methodology](#methodology)
 - [Technologies](#technologies)
-- [Installation](#installation)
-- [Usage](#usage)
+<!-- [Installation](#installation) - [Usage](#usage)-->
+- [Repository_Contents](#repository_contents)
 - [Acknowledgments](#acknowledgments)
 
 ---
@@ -34,17 +34,17 @@ My project  was motivated largely by [This Article](https://content.sph.harvard.
 The goal was to determine whether causal inference methods could complement traditional predictive analytics by providing deeper insights into
 the relationships between features (e.g., study habits, family background) and student performance outcomes.
 
-- **Potential use cases:**
+Some potential use cases for the project would include:
   - Educational Institutions: Schools or universities could use this approach to identify actionable factors (e.g., study habits, parental education) that influence student performance and design targeted interventions.
   - Policy Making: Policymakers could leverage causal insights to allocate resources more effectively, such as funding for tutoring programs or parental support initiatives.
   - Data Science Teams: The methodology could be applied to other domains (e.g., healthcare, marketing) to uncover causal relationships and improve decision-making.
 
-- **Limitations**  
-  - Dataset was relatively small (145 observations) and lacked granularity, which limited the robustness of the causal inferences.
+Limitations of the project:  
+  - Dataset was relatively small (145 observations) and lacked granularity, which limited the robustness of the predictions and causal inferences.
   - The causal graph relied on a lot of assumptions that may not fully capture the complexity of real-world relationships, potentially introducing bias.
-  - Findings are specific to the dataset and may not generalize to other contexts without further validation.
+  - Findings are specific to the dataset and likely do not generalize to other contexts.
 
-- **Future features**
+Potential future features:
   - Expanding the analysis to larger datasets with more features and observations would improve the reliability of the results.
   - Testing the methodology in other domains (e.g., healthcare, finance, sports) to validate its broader applicability.
   - Incorporating more sophisticated causal inference techniques (e.g., instrumental variables, difference-in-differences) could strengthen the analysis.
@@ -53,18 +53,14 @@ the relationships between features (e.g., study habits, family background) and s
  
  ## Methodology
   - I explored the data extensively using statistical testing and visualisations, to measure correlations with the dependent variable and understand distributions of features respectively.
-  - I performed sensitivity analysis to remove features unlikely to contribute to models or have causal effects, and then heavily engineered the remaining features to ensure they could be used for machine learning and interpreted.
-  - I ran three different classifier models to predict student grades(DT, SVM, XGBoost), and tuned the models to incease accuracy
-  - I used feature importance metrics to determine which features had the biggest influence on the models.
-  - I created a DAG to describe any potential causal relationships I would expect between features.
-  - I measured
-I looked at what information about the students might have caused the grades
-I tried to describe what caused what among all the different things I knew about the students
-I measured how much changes in different things among the students made their grades change 
-I found what matters the most when it comes to what might make the students grades change
-I then looked at what I had measured to see if the same things that help predict student grades are the same things that make students have those grades
-I found that the information that caused things was different from the information that predicted things
-I showed that different features are highlighted as being important via the different kinds of analysis, 
+  - Performed sensitivity analysis to remove features unlikely to contribute to models or have causal effects, and then heavily engineered the remaining features to ensure they could be used for machine learning and interpreted.
+  - Ran three different classifier models to predict student grades(DT, SVM, XGBoost), and used a range of different tuning methods on the models to maximise accuracy.
+  - Used feature importance metrics to determine which features had the biggest influence on the models.
+  - Created a DAG to describe any potential causal relationships I would expect between features.
+  - Measured Average Treatment Effects for various features on the dependent variable, as suggested by the feature importance metrics and the correlational tests.
+  - Performed statistical tests to compare the ATEs with the descriptive and predictive methods of investigation
+  - Found that the addition of causal inference highlighted different features as being important compared to the traditional methods
+  
 ---
 
 ## Technologies
@@ -76,13 +72,13 @@ The project uses the following technologies:
 - NumPy
 - Scikit-learn
 - DoWhy
-- scipy
+- Scipy
 - Jupyter Notebook
-- bayes_opt
+- Bayes_opt
 
 
 ---
-## Repository Contents
+## Repository_Contents
 
 - Students.ipynb - Exploratory data analysis, statistical testing, sensitivity analysis, rebinning, feature engineering, decision tree classifier, SVM classifier, XGBoost classifier, hyperparameter tuning, feature importance metric production.
 - Causal inference for features.ipynb - Feature engineering, DAG initialisation, ATE measurement, statistical comparison using Kruskal wallace tests
@@ -93,3 +89,8 @@ The project uses the following technologies:
 - README.md - This wonderful readme file
 - hernan_hsu_healy.png - Image for use in the README
 - LICENSE - MIT license
+
+--- 
+
+## Acknowledgments
+I would like to thank James Garza for his supervision, support, and feedback throughout my project.  
