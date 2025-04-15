@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-  <img src="hernan_hsu_healy.png" width="400" height="350">
+  <img src="/images/hernan_hsu_healy.png" width="400" height="350">
 </div>
 
 *Source: [A Second Chance to Get
@@ -22,7 +22,6 @@ The full research project report as submitted to my college is included [Here](T
 - [Description](#description)
 - [Methodology](#methodology)
 - [Technologies](#technologies)
-<!-- [Installation](#installation) - [Usage](#usage)-->
 - [Repository_Contents](#repository_contents)
 - [Acknowledgments](#acknowledgments)
 
@@ -34,21 +33,15 @@ My project  was motivated largely by [This Article](https://content.sph.harvard.
 The goal was to determine whether causal inference methods could complement traditional predictive analytics by providing deeper insights into
 the relationships between features (e.g., study habits, family background) and student performance outcomes.
 
-Some potential use cases for the project would include:
-  - Educational Institutions: Schools or universities could use this approach to identify actionable factors (e.g., study habits, parental education) that influence student performance and design targeted interventions.
-  - Policy Making: Policymakers could leverage causal insights to allocate resources more effectively, such as funding for tutoring programs or parental support initiatives.
-  - Data Science Teams: The methodology could be applied to other domains (e.g., healthcare, marketing) to uncover causal relationships and improve decision-making.
 
-Limitations of the project:  
-  - Dataset was relatively small (145 observations) and lacked granularity, which limited the robustness of the predictions and causal inferences.
-  - The causal graph relied on a lot of assumptions that may not fully capture the complexity of real-world relationships, potentially introducing bias.
-  - Findings are specific to the dataset and likely do not generalize to other contexts.
 
-Potential future features:
-  - Expanding the analysis to larger datasets with more features and observations would improve the reliability of the results.
-  - Testing the methodology in other domains (e.g., healthcare, finance, sports) to validate its broader applicability.
-  - Incorporating more sophisticated causal inference techniques (e.g., instrumental variables, difference-in-differences) could strengthen the analysis.
-  - Treatment of variables could be reviewed to increase validity
+
+This project serves as proof of concept for the use of causal inference to investigate educational attainment: Schools or universities could use this approach to identify actionable factors (e.g., study habits, parental education) that influence student performance and design targeted interventions. Policy makers could also leverage these causal insights to allocate resources more effectively.
+
+The small size of the dataset may have introduced some limitations to the validity of the result, and the DAG was designed based primarily on untested assumptions, which also isn't conducive to the generalisability of the results, so it would be recommended not to assume the findings are true for other contexts.
+
+For future research in the same vein, a larger dataset would greatly improve reliability of the results. Incorporating further causal inference techniques could also strengthen the results. Treatment of variables could also be revised to ensure interpretability and further increase validity
+
 ---
  
  ## Methodology
@@ -68,26 +61,23 @@ Potential future features:
 The project uses the following technologies:
 
 - Python
+- Jupyter Notebook
 - Pandas
 - NumPy
 - Scikit-learn
 - DoWhy
 - Scipy
-- Jupyter Notebook
 - Bayes_opt
 
 
 ---
 ## Repository_Contents
 
-- Students.ipynb - Exploratory data analysis, statistical testing, sensitivity analysis, rebinning, feature engineering, decision tree classifier, SVM classifier, XGBoost classifier, hyperparameter tuning, feature importance metric production.
-- Causal inference for features.ipynb - Feature engineering, DAG initialisation, ATE measurement, statistical comparison using Kruskal wallace tests
-- Thesis_Milo_Moran.pdf - The final research project submisssion I made to my college 
-- ResearchProposalMiloMoran (1).docx - Initial proposal I submitted as part of my Research and Professional Ethics module
-- Keeping track of feature analysis.docx - A document I updated when I was changing feature interpretations to ensure interpretability of the final models
-- Appendix doc A.docx - an appendix containing valuable information for interpretability.
+- notebooks - All the code for the project, as jupyter notebooks
+- images - Any images that are part of the repository
+- docs-appendices - Some documents where information about features and feature management decisions were tracked
+- Thesis_Milo_Moran.pdf - The final research project submisssion made for the master's research project module
 - README.md - This wonderful readme file
-- hernan_hsu_healy.png - Image for use in the README
 - LICENSE - MIT license
 
 --- 
